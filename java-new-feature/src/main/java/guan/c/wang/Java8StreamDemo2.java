@@ -31,12 +31,13 @@ public class Java8StreamDemo2 {
 
     public String collectJoinName(Stream<People> peoples ){
 
-      return   peoples.map(p -> p.name ).collect(Collectors.joining("and" , "Both" , " are chinese "));
+      return   peoples.map(p -> p.name ).collect(Collectors.joining(" and " , "Both " , " are chinese "));
     }
 
 
     public Map<String, Integer> collectMap(Stream<People> peoples ){
-       return  peoples.collect(Collectors.toMap(p -> p.name , p-> p.age));
+        Map<String, Integer> collect = peoples.collect(Collectors.toMap(p -> p.name, p -> p.age));
+        return collect;
 
     }
 }
