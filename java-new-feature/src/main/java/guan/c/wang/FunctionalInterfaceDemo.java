@@ -14,18 +14,24 @@ package guan.c.wang;
  * @see
  */
 
+@FunctionalInterface   //single abstract method
 interface TestInfterface {
 
-    public int add(int i);
+    public  int add(int i);
+
+    default  void print(){
+        System.out.print("default method ");
+    }
 
 }
+
 
 public class FunctionalInterfaceDemo {
 
     private TestInfterface fun_1 = new TestInfterface() {
         @Override
         public int add(int i) {
-            return 0;
+            return i + 1 ;
         }
     };
 
