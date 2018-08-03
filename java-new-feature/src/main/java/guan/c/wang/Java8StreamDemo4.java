@@ -50,6 +50,7 @@ public class Java8StreamDemo4 {
 
     }
 
+
     public int getDefaultParallelThreads(){
 
         ForkJoinPool commonPool = ForkJoinPool.commonPool();

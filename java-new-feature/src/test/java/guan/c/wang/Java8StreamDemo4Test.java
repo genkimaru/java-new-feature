@@ -16,9 +16,7 @@ import static org.junit.Assert.*;
  */
 public class Java8StreamDemo4Test {
 
-    @Test
-    public void getDefaultParallelThreads() throws Exception {
-    }
+
 
     private List<People> peoples;
     private Java8StreamDemo4 demo4;
