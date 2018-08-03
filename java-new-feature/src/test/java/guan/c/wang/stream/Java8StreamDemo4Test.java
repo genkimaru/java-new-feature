@@ -1,5 +1,7 @@
-package guan.c.wang;
+package guan.c.wang.stream;
 
+import guan.c.wang.stream.Java8StreamDemo4;
+import guan.c.wang.stream.People;
 import org.junit.Before;
 import org.junit.Test;
 

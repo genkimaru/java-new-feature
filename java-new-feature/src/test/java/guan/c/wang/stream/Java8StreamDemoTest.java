@@ -1,13 +1,11 @@
-package guan.c.wang;
+package guan.c.wang.stream;
 
+import guan.c.wang.stream.Java8StreamDemo;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.function.IntFunction;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
-
-import static org.junit.Assert.*;
 
 /**
  * @auther guan.c.wang

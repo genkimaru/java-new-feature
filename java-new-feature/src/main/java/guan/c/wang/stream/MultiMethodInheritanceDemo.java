@@ -1,4 +1,4 @@
-package guan.c.wang;
+package guan.c.wang.stream;
 
 /**
  * @auther guan.c.wang

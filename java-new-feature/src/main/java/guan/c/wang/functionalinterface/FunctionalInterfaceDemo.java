@@ -1,4 +1,4 @@
-package guan.c.wang;
+package guan.c.wang.functionalinterface;
 
 /**
  * If you notice above interfaces code, you will notice @FunctionalInterface annotation.

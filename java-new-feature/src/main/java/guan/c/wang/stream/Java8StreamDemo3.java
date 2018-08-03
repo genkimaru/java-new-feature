@@ -1,4 +1,4 @@
-package guan.c.wang;
+package guan.c.wang.stream;
 
 import java.util.ArrayList;
 import java.util.List;
