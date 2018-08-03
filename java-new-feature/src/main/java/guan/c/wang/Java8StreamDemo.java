@@ -6,7 +6,9 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
- * Created by guan.c.wang on 8/2/2018.
+ * @auther guan.c.wang
+ * @date 8/2/2018.
+ * @see
  */
 public class Java8StreamDemo {
 
