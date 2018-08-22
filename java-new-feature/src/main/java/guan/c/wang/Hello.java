@@ -8,13 +8,13 @@ public class Hello {
   public static void main(String args[]) {
     // Using interface as variable types
     List<String> rawMessage = Arrays.asList("one", "two", "three");
-    List<String> allcaps = toCapitalCase(rawMessage);
-    System.out.println(allcaps);
+    List<String> allUpperCase = toCapitalCase(rawMessage);
+    System.out.println(allUpperCase);
   }
   /**
    * Using Interface as type of argument and return type
    */
-  public static List<String> toCapitalCase(List<String> messages) {
+  private static List<String> toCapitalCase(List<String> messages) {
     return messages.stream()
                     .map(String::toUpperCase)
                     .collect(Collectors.toList());
