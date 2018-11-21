@@ -40,3 +40,33 @@ steps:
 - script: pwd
   workingDirectory: $(Build.SourcesDirectory)
   displayName: pwd $(Build.SourcesDirectory)
+  
+- script: ls
+  workingDirectory: $(Build.ArtifactStagingDirectory)
+  displayName: List contents of a folder
+- script: pwd
+  workingDirectory:  $(Build.ArtifactStagingDirectory)
+  displayName: pwd  $(Build.ArtifactStagingDirectory)
+  
+  
+- script: ls
+  workingDirectory: $(Build.BinariesDirectory)
+  displayName: List contents of a folder
+- script: pwd
+  workingDirectory:  $(Build.BinariesDirectory)
+  displayName: pwd  $(Build.BinariesDirectory)
+  
+  
+- script: ls
+  workingDirectory: $(Agent.HomeDirectory)
+  displayName: List contents of a folder
+- script: pwd
+  workingDirectory:  $(Agent.HomeDirectory)
+  displayName: pwd  $(Agent.HomeDirectory)
+  
+  - script: ls
+  workingDirectory: $(Agent.HomeDirectory)
+  displayName: List contents of a folder
+- script: pwd
+  workingDirectory:  $(Agent.HomeDirectory)
+  displayName: pwd  $(Agent.HomeDirectory)
