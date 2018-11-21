@@ -27,12 +27,11 @@ steps:
     pathtoPublish: $(Build.ArtifactStagingDirectory)/java-new-feature/target/
     artifactName: MyBuildOutputs
 
-- script: date /t
+- script: date 
   displayName: Get the date
-- script: dir
+- script: ls
   workingDirectory: $(Agent.BuildDirectory)
   displayName: List contents of a folder
-- script: |
-    set MYVAR=foo
-    set
-  displayName: Set a variable and then display all
+- script: pwd
+  workingDirectory: $(Agent.BuildDirectory)
+  displayName: pwd  $(Agent.BuildDirectory)
