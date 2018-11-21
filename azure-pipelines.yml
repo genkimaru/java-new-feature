@@ -16,3 +16,13 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
     goals: 'package'
+
+- task: CopyFiles@2
+  inputs:
+    contents: java-new-feature/target/*.jar
+    targetFolder: $(Build.ArtifactStagingDirectory)
+    
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: MyBuildOutputs
