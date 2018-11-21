@@ -70,3 +70,11 @@ steps:
 - script: pwd
   workingDirectory:  $(Agent.HomeDirectory)
   displayName: pwd  $(Agent.HomeDirectory)
+  
+  
+- script: ls
+  workingDirectory: $(Agent.WorkFolder)
+  displayName: List contents of a folder
+- script: pwd
+  workingDirectory:  $(Agent.WorkFolder)
+  displayName: pwd  $(Agent.WorkFolder)
