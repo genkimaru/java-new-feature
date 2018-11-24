@@ -26,6 +26,11 @@ steps:
   inputs:
     pathtoPublish: $(Build.ArtifactStagingDirectory)/java-new-feature/target/
     artifactName: MyBuildOutputs
+    
+ - task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'java-new-feature.jar' 
+    targetPath: java-new-feature/target/*.jar
 
 - script: ls
   workingDirectory: $(Agent.BuildDirectory)
