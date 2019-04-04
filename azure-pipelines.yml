@@ -1,0 +1,85 @@
+# Maven
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+pool:
+  vmImage: 'Ubuntu 16.04'
+
+steps:
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'java-new-feature/pom.xml'
+    mavenOptions: '-Xmx3072m -Dmaven.test.skip=true'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.10'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: false
+    goals: 'package'
+
+- task: CopyFiles@2
+  inputs:
+    contents: java-new-feature/target/*.jar
+    targetFolder: $(Build.ArtifactStagingDirectory)
+    
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: $(Build.ArtifactStagingDirectory)/java-new-feature/target/
+    artifactName: MyBuildOutputs
+    
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'java-new-feature.jar' 
+    targetPath: $(Build.ArtifactStagingDirectory)/java-new-feature/target/
+
+- script: ls
+  workingDirectory: $(Agent.BuildDirectory)
+  displayName: List contents of a folder
+- script: pwd
+  workingDirectory: $(Agent.BuildDirectory)
+  displayName: pwd  $(Agent.BuildDirectory)
+
+- script: ls
+  workingDirectory: $(Build.SourcesDirectory)
+  displayName: List contents of a folder
+- script: pwd
+  workingDirectory: $(Build.SourcesDirectory)
+  displayName: pwd $(Build.SourcesDirectory)
+  
+- script: ls
+  workingDirectory: $(Build.ArtifactStagingDirectory)
+  displayName: List contents of a folder
+- script: pwd
+  workingDirectory:  $(Build.ArtifactStagingDirectory)
+  displayName: pwd  $(Build.ArtifactStagingDirectory)
+  
+  
+- script: ls
+  workingDirectory: $(Build.BinariesDirectory)
+  displayName: List contents of a folder
+- script: pwd
+  workingDirectory:  $(Build.BinariesDirectory)
+  displayName: pwd  $(Build.BinariesDirectory)
+  
+  
+- script: ls
+  workingDirectory: $(Agent.HomeDirectory)
+  displayName: List contents of a folder
+- script: pwd
+  workingDirectory:  $(Agent.HomeDirectory)
+  displayName: pwd  $(Agent.HomeDirectory)
+  
+- script: ls
+  workingDirectory: $(Agent.HomeDirectory)
+  displayName: List contents of a folder
+- script: pwd
+  workingDirectory:  $(Agent.HomeDirectory)
+  displayName: pwd  $(Agent.HomeDirectory)
+  
+  
+- script: ls
+  workingDirectory: $(Agent.WorkFolder)
+  displayName: List contents of a folder
+- script: pwd
+  workingDirectory:  $(Agent.WorkFolder)
+  displayName: pwd  $(Agent.WorkFolder)
