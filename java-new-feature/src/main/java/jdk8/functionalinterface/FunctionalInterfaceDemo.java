@@ -1,4 +1,4 @@
-package guan.c.wang.functionalinterface;
+package jdk8.functionalinterface;
 
 /**
  * If you notice above interfaces code, you will notice @FunctionalInterface annotation.

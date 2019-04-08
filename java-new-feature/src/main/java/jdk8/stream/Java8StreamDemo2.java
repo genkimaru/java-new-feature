@@ -1,4 +1,4 @@
-package guan.c.wang.stream;
+package jdk8.stream;
 
 import java.util.IntSummaryStatistics;
 import java.util.Map;

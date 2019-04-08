@@ -1,4 +1,4 @@
-package guan.c.wang.stream;
+package jdk8.stream;
 
 import java.util.ArrayList;
 import java.util.List;

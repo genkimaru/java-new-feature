@@ -1,4 +1,4 @@
-package guan.c.wang;
+package jdk8;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package guan.c.wang.stream;
+package jdk8.stream;
 
 import java.util.List;
 import java.util.Optional;

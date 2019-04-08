@@ -1,4 +1,4 @@
-package guan.c.wang.stream;
+package jdk8.stream;
 
 /**
  * @auther guan.c.wang

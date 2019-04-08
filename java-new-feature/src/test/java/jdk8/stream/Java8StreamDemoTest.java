@@ -1,6 +1,5 @@
-package guan.c.wang.stream;
+package jdk8.stream;
 
-import guan.c.wang.stream.Java8StreamDemo;
 import org.junit.Before;
 import org.junit.Test;
 

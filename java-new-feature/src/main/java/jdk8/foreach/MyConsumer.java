@@ -1,4 +1,4 @@
-package guan.c.wang.foreach;
+package jdk8.foreach;
 
 import java.util.function.Consumer;
 
