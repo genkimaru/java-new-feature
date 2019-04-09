@@ -1,0 +1,4 @@
+[submodule "airowner"]
+	path = airowner
+	url = https://accenturecio.visualstudio.com/EntInsight_7438/_git/CCSIPTracker_9606_airowner
+	branch = story_99636
