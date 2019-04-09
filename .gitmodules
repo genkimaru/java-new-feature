@@ -1,4 +1,3 @@
 [submodule "shared"]
 	path = shared
 	url = https://github.com/genkimaru/shared.git
-	branch = development
